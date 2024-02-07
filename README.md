@@ -1,0 +1,6 @@
+![Screenshot_2024-02-07-14-42-39-065_com example travelapp](https://github.com/JiM35/Travel-App/assets/48186310/975aadd6-1623-407e-9a06-64283a440d18)
+![Screenshot_2024-02-07-14-42-35-476_com example travelapp](https://github.com/JiM35/Travel-App/assets/48186310/52a86306-7453-4072-9cee-45c68b0886d7)
+![Screenshot_2024-02-07-14-42-31-314_com example travelapp](https://github.com/JiM35/Travel-App/assets/48186310/ed4ca408-0697-40d7-8f7f-a5569e96f978)
+![Screenshot_2024-02-07-14-42-27-403_com example travelapp](https://github.com/JiM35/Travel-App/assets/48186310/7a3cf544-5920-4003-bbcd-276523c75b42)
+![Screenshot_2024-02-07-14-42-24-635_com example travelapp](https://github.com/JiM35/Travel-App/assets/48186310/f035035d-f9f3-4a0e-8cfe-b2b269138383)
+![Screenshot_2024-02-07-14-42-20-763_com example travelapp](https://github.com/JiM35/Travel-App/assets/48186310/488e8259-a255-4215-8179-65a742da3c6f)
