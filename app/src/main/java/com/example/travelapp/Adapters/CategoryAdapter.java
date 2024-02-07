@@ -19,7 +19,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
     ArrayList<CategoryDomain> items;
 
-//    Generate Constructor
+    //    Generate Constructor
     public CategoryAdapter(ArrayList<CategoryDomain> items) {
         this.items = items;
     }

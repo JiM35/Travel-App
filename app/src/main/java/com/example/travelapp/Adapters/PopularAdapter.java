@@ -1,5 +1,7 @@
 package com.example.travelapp.Adapters;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.GranularRoundedCorners;
+import com.example.travelapp.Activities.DetailActivity;
 import com.example.travelapp.Domains.PopularDomain;
 import com.example.travelapp.R;
 
@@ -20,12 +23,12 @@ import java.util.ArrayList;
 
 public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHolder> {
     ArrayList<PopularDomain> items;
-    DecimalFormat formatter;
+//    DecimalFormat formatter;
 
-//    Generate Constructor
+    //    Generate Constructor
     public PopularAdapter(ArrayList<PopularDomain> items) {
         this.items = items;
-        formatter = new DecimalFormat("###,###,###,###");
+//        formatter = new DecimalFormat("###,###,###,###");
     }
 
     //    Implement methods
@@ -37,6 +40,7 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
         return new ViewHolder(inflate);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull PopularAdapter.ViewHolder holder, int position) {
         holder.titleTxt.setText(items.get(position).getTitle());
@@ -45,6 +49,12 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
 
         int drawableResId = holder.itemView.getResources().getIdentifier(items.get(position).getPic(), "drawable", holder.itemView.getContext().getPackageName());
         Glide.with(holder.itemView.getContext()).load(drawableResId).transform(new CenterCrop(), new GranularRoundedCorners(40, 40, 40, 40)).into(holder.pic);
+
+        holder.itemView.setOnClickListener(view -> {
+            Intent intent = new Intent(holder.itemView.getContext(), DetailActivity.class);
+            intent.putExtra("object", items.get(position));
+            holder.itemView.getContext().startActivity(intent);
+        });
     }
 
     @Override
@@ -52,7 +62,7 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
         return items.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView titleTxt, locationTxt, scoreTxt;
         ImageView pic;
 
